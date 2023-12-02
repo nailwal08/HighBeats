@@ -1,0 +1,97 @@
+:root {
+    --bgColor: #051650;
+    --bgColorLight: #1a43bf;
+    --textColor: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: var(--bgColor);
+    background: linear-gradient(60deg, var(--bgColor), var(--bgColorLight));
+    color: var(--textColor);
+    position: relative;
+}
+
+audio {
+    position: fixed;
+    margin-left: 40%;
+    bottom: 60px;
+    margin-bottom: 10px;
+    width: calc(100% -20px);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: rgb(146, 146, 146);
+    border-radius: 50%;
+}
+
+audio.active {
+    bottom: 10px;
+    margin-left: 40%;
+}
+
+#thefile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+label.file {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    background: skyblue;
+    color: black;
+    font-size: 1.25em;
+    font-weight: 700;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+label.file:hover {
+    background: rgb(93, 166, 196);
+    transform: translate3d(-50%, -55%, 0);
+    color: darkblue;
+    border: 1px solid black;
+}
+
+label.file:active {
+    background: skyblue;
+    transform: translate3d(-50%, -45%, 0);
+    color: black;
+}
+
+label.file.normal {
+    transform: translate3d(10%, 50%, 0);
+    padding: 0.2rem 2rem;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+#home {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.one {
+    font-size: 60px;
+    text-shadow: 3px 3px 5px rgba(89, 203, 238, 0.5);
+}
